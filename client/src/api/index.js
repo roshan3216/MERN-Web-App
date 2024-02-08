@@ -2,7 +2,10 @@ import axios from 'axios';
 
 // const API = axios.create({baseURL : 'http://localhost:5000'});
 
-const API = axios.create({baseURL : 'https://remeniscing-memories.herokuapp.com/'});
+const API = axios.create({
+    // baseURL : 'https://remeniscing-memories.herokuapp.com/'
+    baseURL: 'https://mern-web-app-backend-ipc8.onrender.com',
+});
 
 // const url = 'https://reminiscing-anecdotes.herokuapp.com/posts';
 

@@ -20,10 +20,11 @@ app.get('/',(req,res)=>{
 
 // https://www.mongodb.com/cloud/atlas
 
-// const CONNECTION_URL='mongodb+srv://javascriptmastery:javascriptmastery123@cluster0.gakkz.mongodb.net/dbMemories?retryWrites=true&w=majority';
-const PORT = process.env.PORT || 5000;
+const CONNECTION_URL= process.env.CONNECTION_URL;
+console.log(CONNECTION_URL, '[connection url]');
+const PORT = process.env.PORT || 7000;
 
-mongoose.connect(process.env.CONNECTION_URL,{useNewUrlParser: true , useUnifiedTopology : true})
+mongoose.connect(CONNECTION_URL,{useNewUrlParser: true , useUnifiedTopology : true})
     .then( ()=>app.listen(PORT, ()=> console.log(`SERVER RUNNING ON PORT : ${PORT}`)))
     .catch( (error)=> console.log(error));
 
